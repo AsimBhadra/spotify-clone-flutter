@@ -11,6 +11,11 @@ class AppRoutes {
         name: 'SplashScreen',
         builder: (context, state) => const SplashScreen(),
       ),
+      GoRoute(
+        path: '/login',
+        name: 'LoginScreen',
+        builder: (context, state) => const LoginScreen(),
+      ),
     ];
   }
 }

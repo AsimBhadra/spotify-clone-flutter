@@ -7,4 +7,10 @@ class AppColors {
 
   /// Primary Color
   static const Color greenColor = Color(0xff1DB954);
+
+  /// Primary Text Color
+  static const Color whiteColor = Color(0xffFFFFFF);
+
+  /// Background Gradient Color
+  static const Color blackGradient = Color(0xff3b3a3b);
 }

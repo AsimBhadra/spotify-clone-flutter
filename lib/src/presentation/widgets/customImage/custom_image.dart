@@ -27,7 +27,7 @@ class CustomImage extends StatelessWidget {
   Widget build(BuildContext context) {
     if (imageType == ImageType.asset) {
       return ExtendedImage.asset(
-        'assets/icons/main-icon.png',
+        imgUrl,
         width: width,
         height: height,
       );
