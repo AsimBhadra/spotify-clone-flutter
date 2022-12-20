@@ -8,6 +8,36 @@ class AppTheme {
   static ThemeData get theme {
     return ThemeData(
       scaffoldBackgroundColor: AppColors.blackColor,
+      appBarTheme: const AppBarTheme(
+        backgroundColor: AppColors.blackColor,
+        elevation: 0,
+        iconTheme: IconThemeData(
+          color: AppColors.whiteColor,
+        ),
+      ),
+      inputDecorationTheme: InputDecorationTheme(
+        filled: true,
+        fillColor: AppColors.greyColor,
+        contentPadding: EdgeInsets.symmetric(
+          horizontal: 16.w,
+          vertical: 20.h,
+        ),
+        border: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5),
+        ),
+        focusedBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5),
+        ),
+        enabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5),
+        ),
+        errorBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5),
+        ),
+        disabledBorder: OutlineInputBorder(
+          borderRadius: BorderRadius.circular(5),
+        ),
+      ),
       textButtonTheme: TextButtonThemeData(
         style: ButtonStyle(
           textStyle: MaterialStateProperty.all<TextStyle>(
@@ -35,10 +65,28 @@ class AppTheme {
               color: AppColors.whiteColor,
               fontFamily: 'Gotham',
             ),
+            headline3: TextStyle(
+              fontSize: 28.sp,
+              fontWeight: FontWeight.w600,
+              color: AppColors.whiteColor,
+              fontFamily: 'Gotham',
+            ),
+            headline4: TextStyle(
+              fontSize: 22.sp,
+              fontWeight: FontWeight.w600,
+              color: AppColors.whiteColor,
+              fontFamily: 'Gotham',
+            ),
             headline6: TextStyle(
               fontSize: 14.sp,
               fontWeight: FontWeight.w600,
               color: AppColors.blackColor,
+              fontFamily: 'Gotham',
+            ),
+            subtitle1: TextStyle(
+              fontSize: 11.sp,
+              fontWeight: FontWeight.w500,
+              color: AppColors.whiteColor.withOpacity(0.6),
               fontFamily: 'Gotham',
             ),
           ),

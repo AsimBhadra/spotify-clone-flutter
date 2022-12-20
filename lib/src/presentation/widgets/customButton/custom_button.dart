@@ -10,19 +10,21 @@ class CustomButton extends StatelessWidget {
     required this.text,
     required this.onPressed,
     this.iconUrl,
+    this.disabled = false,
   });
 
   final ButtonType buttonType;
   final String text;
   final VoidCallback onPressed;
   final String? iconUrl;
+  final bool disabled;
 
   @override
   Widget build(BuildContext context) {
     if (buttonType == ButtonType.text) {
       return TextButton(
         onPressed: onPressed,
-        child: Text(text),
+        child: Text(text,),
       );
     } else {
       return SizedBox(

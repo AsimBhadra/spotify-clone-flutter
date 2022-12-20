@@ -1,9 +1,9 @@
 part of screens;
 
 /// This class is used to create a login screen.
-class LoginScreen extends StatelessWidget {
+class WelcomeScreen extends StatelessWidget {
   /// LoginScreen Constructor
-  const LoginScreen({super.key});
+  const WelcomeScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +48,9 @@ class LoginScreen extends StatelessWidget {
               CustomButton(
                 buttonType: ButtonType.primary,
                 text: 'Sign up free',
-                onPressed: () {},
+                onPressed: () {
+                  context.go('/createAccount');
+                },
               ),
               SizedBox(
                 height: 8.h,

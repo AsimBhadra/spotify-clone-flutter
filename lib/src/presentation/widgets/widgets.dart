@@ -7,3 +7,4 @@ import 'package:spotify_clone/src/config/colors/colors.dart';
 
 part 'customImage/custom_image.dart';
 part 'customButton/custom_button.dart';
+part 'customSmallButton/custom_small_button.dart';

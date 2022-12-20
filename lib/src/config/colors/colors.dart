@@ -11,6 +11,9 @@ class AppColors {
   /// Primary Text Color
   static const Color whiteColor = Color(0xffFFFFFF);
 
+  /// Secondary Background Color
+  static const Color greyColor = Color(0xff5a5b5b);
+
   /// Background Gradient Color
   static const Color blackGradient = Color(0xff3b3a3b);
 }

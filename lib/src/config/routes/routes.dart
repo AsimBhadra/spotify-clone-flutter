@@ -12,9 +12,14 @@ class AppRoutes {
         builder: (context, state) => const SplashScreen(),
       ),
       GoRoute(
-        path: '/login',
-        name: 'LoginScreen',
-        builder: (context, state) => const LoginScreen(),
+        path: '/welcome',
+        name: 'WelcomeScreen',
+        builder: (context, state) => const WelcomeScreen(),
+      ),
+      GoRoute(
+        path: '/createAccount',
+        name: 'CreateAccountScreen',
+        builder: (context, state) => const CreateAccountScreen(),
       ),
     ];
   }
