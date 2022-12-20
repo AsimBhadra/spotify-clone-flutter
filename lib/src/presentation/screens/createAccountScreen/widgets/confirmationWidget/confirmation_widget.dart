@@ -1,4 +1,4 @@
-// ignore_for_file: public_member_api_docs
+// ignore_for_file: public_member_api_docs, lines_longer_than_80_chars
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,6 +14,8 @@ class ConfirmationWidget extends StatefulWidget {
 
 class _ConfirmationWidgetState extends State<ConfirmationWidget> {
   bool termsOfUse = false;
+  bool offers = false;
+  bool shareData = false;
 
   @override
   Widget build(BuildContext context) {
@@ -80,7 +82,9 @@ class _ConfirmationWidgetState extends State<ConfirmationWidget> {
               ),
               const Spacer(),
               Checkbox(
-                fillColor: MaterialStateProperty.all(AppColors.greenColor),
+                fillColor: termsOfUse
+                    ? MaterialStateProperty.all(AppColors.greenColor)
+                    : MaterialStateProperty.all(AppColors.greyColor),
                 checkColor: AppColors.blackColor,
                 value: termsOfUse,
                 shape: const CircleBorder(),
@@ -126,13 +130,15 @@ class _ConfirmationWidgetState extends State<ConfirmationWidget> {
               ),
               const Spacer(),
               Checkbox(
-                fillColor: MaterialStateProperty.all(AppColors.greenColor),
+                fillColor: offers
+                    ? MaterialStateProperty.all(AppColors.greenColor)
+                    : MaterialStateProperty.all(AppColors.greyColor),
                 checkColor: AppColors.blackColor,
-                value: termsOfUse,
+                value: offers,
                 shape: const CircleBorder(),
                 onChanged: (bool? value) {
                   setState(() {
-                    termsOfUse = value!;
+                    offers = value!;
                   });
                 },
               ),
@@ -146,13 +152,15 @@ class _ConfirmationWidgetState extends State<ConfirmationWidget> {
               ),
               const Spacer(),
               Checkbox(
-                fillColor: MaterialStateProperty.all(AppColors.greenColor),
+                fillColor: shareData
+                    ? MaterialStateProperty.all(AppColors.greenColor)
+                    : MaterialStateProperty.all(AppColors.greyColor),
                 checkColor: AppColors.blackColor,
-                value: termsOfUse,
+                value: shareData,
                 shape: const CircleBorder(),
                 onChanged: (bool? value) {
                   setState(() {
-                    termsOfUse = value!;
+                    shareData = value!;
                   });
                 },
               ),
@@ -164,7 +172,7 @@ class _ConfirmationWidgetState extends State<ConfirmationWidget> {
           CustomSmallButton(
             text: 'Create account',
             onPressed: () {},
-            disabled: !termsOfUse,
+            disabled: !(termsOfUse && offers && shareData),
           ),
           SizedBox(
             height: 10.h,

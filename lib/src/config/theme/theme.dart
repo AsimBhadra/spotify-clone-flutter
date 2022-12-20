@@ -64,12 +64,14 @@ class AppTheme {
               fontWeight: FontWeight.w600,
               color: AppColors.whiteColor,
               fontFamily: 'Gotham',
+              letterSpacing: -2,
             ),
             headline3: TextStyle(
               fontSize: 28.sp,
               fontWeight: FontWeight.w600,
               color: AppColors.whiteColor,
               fontFamily: 'Gotham',
+              letterSpacing: -2,
             ),
             headline4: TextStyle(
               fontSize: 22.sp,

@@ -3,7 +3,6 @@
 import 'package:email_validator/email_validator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:spotify_clone/src/config/colors/colors.dart';
 import 'package:spotify_clone/src/presentation/widgets/widgets.dart';
 
 class EmailWidget extends StatefulWidget {
@@ -28,7 +27,7 @@ class _EmailWidgetState extends State<EmailWidget> {
             style: Theme.of(context).textTheme.headline3,
           ),
           SizedBox(height: 8.h),
-          TextFormField(
+          CustomTextField(
             onChanged: (value) {
               if (EmailValidator.validate(value)) {
                 setState(() {
@@ -36,11 +35,6 @@ class _EmailWidgetState extends State<EmailWidget> {
                 });
               }
             },
-            cursorColor: AppColors.whiteColor,
-            style: Theme.of(context).textTheme.headline6!.copyWith(
-                  color: AppColors.whiteColor,
-                  fontWeight: FontWeight.w500,
-                ),
           ),
           SizedBox(height: 8.h),
           Text(

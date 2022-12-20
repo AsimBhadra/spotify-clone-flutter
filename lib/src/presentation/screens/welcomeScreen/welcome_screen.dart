@@ -31,8 +31,8 @@ class WelcomeScreen extends StatelessWidget {
               CustomImage(
                 imgUrl: 'assets/icons/white-icon.png',
                 imageType: ImageType.asset,
-                height: 80.w,
-                width: 80.w,
+                height: 60.w,
+                width: 60.w,
               ),
               SizedBox(
                 height: 80.h,
@@ -43,7 +43,7 @@ class WelcomeScreen extends StatelessWidget {
                 textAlign: TextAlign.center,
               ),
               SizedBox(
-                height: 60.h,
+                height: 100.h,
               ),
               CustomButton(
                 buttonType: ButtonType.primary,

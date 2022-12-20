@@ -2,7 +2,6 @@
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:spotify_clone/src/config/colors/colors.dart';
 import 'package:spotify_clone/src/presentation/widgets/widgets.dart';
 
 class PasswordWidget extends StatefulWidget {
@@ -27,7 +26,8 @@ class _PasswordWidgetState extends State<PasswordWidget> {
             style: Theme.of(context).textTheme.headline3,
           ),
           SizedBox(height: 8.h),
-          TextFormField(
+          CustomTextField(
+            isPassword: true,
             onChanged: (value) {
               if (value.length >= 8) {
                 setState(() {
@@ -39,15 +39,10 @@ class _PasswordWidgetState extends State<PasswordWidget> {
                 });
               }
             },
-            cursorColor: AppColors.whiteColor,
-            style: Theme.of(context).textTheme.headline6!.copyWith(
-                  color: AppColors.whiteColor,
-                  fontWeight: FontWeight.w500,
-                ),
           ),
           SizedBox(height: 8.h),
           if (!_disabled)
-            const SizedBox()
+            const Text('')
           else
             Text(
               'Use at least 8 characters.',
@@ -62,6 +57,5 @@ class _PasswordWidgetState extends State<PasswordWidget> {
         ],
       ),
     );
- 
   }
 }

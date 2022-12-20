@@ -7,8 +7,8 @@ class CustomImage extends StatelessWidget {
     super.key,
     required this.imgUrl,
     required this.imageType,
-    this.width = 200,
-    this.height = 200,
+    this.width = 150,
+    this.height = 150,
   });
 
   /// imgUrl is the url of the image.
